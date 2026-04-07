@@ -6,12 +6,16 @@ function Navbar() {
   }
 
   return (
-    <nav>
-      <button onClick={() => scrollToSection('home')}>Home</button>
-      <button onClick={() => scrollToSection('about')}>About</button>
-      <button onClick={() => scrollToSection('services')}>Services</button>
-      <button onClick={() => scrollToSection('projects')}>Projects</button>
-      <button onClick={() => scrollToSection('contact')}>Contact</button>
+    <nav className="navbar">
+      <h2>GeoSurvey</h2>
+
+      <div className="nav-links">
+        <button onClick={() => scrollToSection('home')}>Home</button>
+        <button onClick={() => scrollToSection('about')}>About</button>
+        <button onClick={() => scrollToSection('services')}>Services</button>
+        <button onClick={() => scrollToSection('projects')}>Projects</button>
+        <button onClick={() => scrollToSection('contact')}>Contact</button>
+      </div>
     </nav>
   )
 }
