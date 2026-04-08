@@ -96,7 +96,11 @@ button {
   display: flex;
   align-items: center;
   padding: 120px 60px;
-  background: #f5f7fa;
+  /* background: #f5f7fa; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .hero-content {
