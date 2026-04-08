@@ -116,6 +116,91 @@ button {
 }
 
 /* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+  min-height: 100vh;
+  padding: 60px 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-left {
+  position: relative;
+}
+
+.about-right h2 {
+  font-size: 24px;
+  font-weight: 00;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-main-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-overlay-image {
+  position: absolute;
+  width: 300px;
+  left: -40px;
+  top: 60px;
+  border: 8px solid white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* .experience-badge {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+} */
+
+.about-label {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #ffb633;
+}
+
+.about-description {
+  margin: 20px 0;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-features {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.feature-box {
+  flex: 1;
+}
+
+.quote-box {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 4px solid orange;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* =========================
    GENERAL SECTIONS
 ========================= */
 .section,
@@ -211,5 +296,20 @@ h2 {
 
   .nav-links.active {
     display: flex;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+  }
+
+  .about-overlay-image {
+    width: 200px;
+    left: 10px;
+    top: 40px;
+  }
+
+  .about-features {
+    flex-direction: column;
   }
 }
