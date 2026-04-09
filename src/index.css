@@ -53,9 +53,44 @@ body {
   cursor: pointer;
 }
 
+.navbar h2 {
+  padding: 30px 0
+}
+
 .nav-links {
   display: flex;
   gap: 20px;
+}
+
+.nav-links button {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-links button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 3px;
+  background: #ffb633;
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: #ffb633;
+}
+
+.nav-links button:hover::after {
+  width: 100%;
 }
 
 .menu-toggle {
@@ -79,6 +114,7 @@ button {
 
 /* CTA button for hero */
 .hero-btn {
+  font-size: 20px;
   margin-top: 20px;
   padding: 12px 24px;
   background: black;
@@ -86,6 +122,19 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+
+  transition: 
+    background-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+  background: #ffb633;
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================
@@ -104,7 +153,19 @@ button {
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 1200px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 750px;
 }
 
 .hero-btn {
@@ -201,12 +262,116 @@ button {
 }
 
 /* =========================
+   SERVICES SECTION
+========================= */
+.services-section {
+  padding: 50px 150px;
+  text-align: center;
+}
+
+.services-label {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #d99a00;
+}
+
+.services-heading {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.services-subtext {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; 
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-content {
+  flex: 1;
+  position: relative;
+  padding: 40px 30px;
+  text-align: left;
+}
+
+.service-content h3 {
+  margin-top: 15px;
+}
+
+.service-card.dark .service-content {
+  background: #0b0b0b;
+  color: white;
+}
+
+.service-card.accent .service-content {
+  background: #f5b42a;
+  color: black;
+}
+
+.service-icon {
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 70px;
+  height: 70px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5b42a;
+  border-radius: 8px;
+}
+
+.service-card.accent .service-icon {
+  background: black;
+  color: white;
+}
+
+/* .read-more-btn {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+} */
+
+/* =========================
    GENERAL SECTIONS
 ========================= */
 .section,
 section {
   min-height: 100vh;
-  padding: 120px 60px;
+  padding: 80px 60px;
   scroll-margin-top: 90px;
 }
 
@@ -298,6 +463,10 @@ h2 {
     display: flex;
   }
 
+  .hero-section {
+    padding: 100px 20px;
+  }
+
   .about-section {
     grid-template-columns: 1fr;
     padding: 80px 20px;
@@ -311,5 +480,17 @@ h2 {
 
   .about-features {
     flex-direction: column;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-heading {
+    font-size: 32px;
+  }
+
+  .services-section {
+    padding: 80px 20px;
   }
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from '../assets/GeoAxis-Logo.png'
+// import logo from '../assets/GeoAxis-Logo.png'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,8 +26,8 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* <h2>GEOAXIS</h2> */}
-      <img src={logo} alt="GeoAxis Brand Logo" className="navbar-logo" onClick={() => scrollToSection('home')}/>
+      <h2>GEOAXIS</h2>
+      {/* <img src={logo} alt="GeoAxis Brand Logo" className="navbar-logo" onClick={() => scrollToSection('home')}/> */}
 
       <button
         className="menu-toggle"

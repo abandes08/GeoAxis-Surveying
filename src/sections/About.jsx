@@ -63,7 +63,8 @@ function About() {
               Delivering precision, compliance, and trust in every
               land surveying project.
             </p>
-            <strong>Engr. Arjay A. Nuñez - CEO GeoAxis</strong>
+            <strong>GeoAxis Surveying Team</strong>
+            {/* <strong>Engr. Arjay A. Nuñez - CEO GeoAxis</strong> */}
           </div>
         </div>
       </section>
