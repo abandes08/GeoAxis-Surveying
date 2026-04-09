@@ -116,12 +116,11 @@ function Services() {
         <p className="services-label">OUR SERVICES</p>
 
         <h2 className="services-heading">
-          What Service We Provide
+          What Services We Provide
         </h2>
 
         <p className="services-subtext">
-          Professional geodetic engineering and land surveying solutions
-          for residential, commercial, and government projects.
+          Providing professional geodetic engineering and land surveying services for residential, commercial, and government projects.
         </p>
 
         <div className="services-grid">
