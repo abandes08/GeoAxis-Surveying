@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="footer">
-      <p>© 2026 GeoAxis. All rights reserved.</p>
+    <footer className="footer-section">
+      <p>© 2026 GeoAxis Land Surveying Services. All Rights Reserved. Precision. Accuracy. Integrity.</p>
     </footer>
   )
 }
