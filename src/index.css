@@ -527,9 +527,9 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100vh;
+  min-height: auto;
   background: #f5f7fa;
-  padding: 50px 60px;
+  padding: 50px 60px 0px;
 }
 
 .contact-layout {
@@ -650,6 +650,7 @@ h2 {
 }
 
 .company-info h3 {
+  font-size: clamp(18px, 4vw, 24px);
   margin-bottom: 10px;
 }
 
@@ -668,104 +669,94 @@ h2 {
 
 .faq-section {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
-.faq-layout {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
-  align-items: stretch;
+/* MAIN ONE-PIECE CONTAINER */
+.faq-wrapper {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.faq-image-container {
+/* BANNER */
+.faq-banner {
   position: relative;
   width: 100%;
-  min-height: 600px;
-  border-radius: 14px;
+  height: 360px;
+
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+
+  /* remove lower radius */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
   overflow: hidden;
 }
 
-.faq-image {
+.faq-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* Dark overlay */
-.faq-image-overlay {
+/* OVERLAY */
+.faq-banner-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   color: white;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.faq-image-overlay h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.faq-image-overlay p {
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.faq-image-overlay ul {
-  list-style: none;
-  padding: 0;
-}
-
-.faq-image-overlay li {
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.faq-content {
-  width: 100%;
-  min-height: 600px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 40px;
 }
 
-.faq-content h2 {
-  margin-bottom: 10px;
+.faq-banner-overlay h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 15px;
 }
 
-.faq-content p {
+.faq-banner-overlay p {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  text-align: justify;
+  max-width: 850px;
+  line-height: 1.5;
+}
+
+/* FAQ BODY */
+.faq-content {
+  background: white;
+  padding: 35px;
+}
+
+.faq-intro {
+  margin-bottom: 25px;
   line-height: 1.7;
+  color: #555;
 }
 
-.faq-container {
-  margin-top: 25px;
-}
-
+/* QUESTIONS */
 .faq-item {
   margin-bottom: 15px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
 }
 
 .faq-question {
   width: 100%;
   padding: 20px;
   font-size: 17px;
-  font-weight: 600;
-  background: white;
+  font-weight:650;
+  background: #fff;
   border: none;
   cursor: pointer;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -773,12 +764,12 @@ h2 {
 
 .faq-question.active {
   background: #ffb633;
-  color: white;
+  /* color: white; */
 }
 
 .faq-answer {
-  background: white;
   padding: 20px;
+  background: #fff;
   line-height: 1.7;
 }
 
@@ -786,6 +777,7 @@ h2 {
    FOOTER
 ========================= */
 .footer-section {
+  font-weight: 500;
   text-align: center;
   padding: 20px;
   color: #fff;
@@ -795,7 +787,7 @@ h2 {
 /* =========================
    MOBILE RESPONSIVENESS
 ========================= */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1024px) {
   .menu-toggle {
     display: block;
   }
@@ -845,7 +837,7 @@ h2 {
   }
 
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
   }
 
@@ -864,8 +856,9 @@ h2 {
 
   .project-item img {
     width: 100%;
-    height: 200px;
-    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .project-info {
@@ -895,6 +888,10 @@ h2 {
 
   .faq-image-container {
     min-height: 350px;
+  }
+
+  .faq-answer {
+    text-align: justify;
   }
 
 }
@@ -930,6 +927,14 @@ h2 {
   }
 
   .contact-section {
-    padding: 35px 40px;
+    padding: 35px 40px 0;
+  }
+
+  .faq-content {
+    padding: 25px;
+  }
+
+  .faq-question {
+    text-align: left;
   }
 }

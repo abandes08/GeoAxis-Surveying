@@ -159,36 +159,28 @@ function Contact() {
           </div>
 
           <div className="faq-section">
-            <div className="faq-layout">
-
-              {/* LEFT SIDE - IMAGE */}
-              <div className="faq-image-container">
+            <div className="faq-wrapper">
+              {/* TOP BANNER */}
+              <div className="faq-banner">
                 <img
                   src="/images/survey-faq.jpg"
                   alt="Land Surveying Consultation"
-                  className="faq-image"
+                  className="faq-banner-image"
                 />
 
-                <div className="faq-image-overlay">
-                  <h3>Need Help With Your Survey Project?</h3>
+                <div className="faq-banner-overlay">
+                  <h2>Frequently Asked Questions</h2>
                   <p>
-                    Get professional consultation for boundary, topographic,
-                    construction, and lot titling surveys.
+                    Find answers to the most common questions about our land
+                    surveying, mapping, and consultation services. We understand that every project begins with important questions.
+                  Below are the most common inquiries from property owners,
+                  developers, and contractors.
                   </p>
-
-                  <ul>
-                    <li>✔ Free consultation</li>
-                    <li>✔ Accurate measurements</li>
-                    <li>✔ Fast project turnaround</li>
-                  </ul>
                 </div>
               </div>
 
-              {/* RIGHT SIDE - FAQ */}
+              {/* QUESTIONS */}
               <div className="faq-content">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about our land surveying services.</p>
-
                 <div className="faq-container">
                   {faqData.map((faq, index) => (
                     <div key={index} className="faq-item">
