@@ -30,6 +30,17 @@ function Hero() {
           >
             Request a Survey
           </button>
+
+          <button
+            className="hero-btn"
+            onClick={() =>
+              document.getElementById('services').scrollIntoView({
+                behavior: 'smooth'
+              })
+            }
+          >
+            View Our Services
+          </button>
         </div>
       </section>
     </FadeInSection>

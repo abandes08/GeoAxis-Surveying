@@ -24,26 +24,6 @@ function Projects() {
       including alignment verification, elevation profiling, and boundary control points.
       This project ensures accurate field measurements for safe, compliant, and efficient road design, expansion, and construction activities.`
     },
-    // {
-    //   image: '/images/project4.jpg',
-    //   title: 'Subdivision Development Survey',
-    //   description: 'Comprehensive land plotting and lot segmentation for residential subdivision projects.'
-    // },
-    // {
-    //   image: '/images/project5.jpg',
-    //   title: 'Topographic Elevation Survey',
-    //   description: 'Detailed terrain elevation mapping for engineering and site preparation works.'
-    // },
-    // {
-    //   image: '/images/project6.jpg',
-    //   title: 'Construction Layout Survey',
-    //   description: 'Precision site staking and layout marking for building foundation and structural works.'
-    // },
-    // // {
-    // //   image: '/images/project7.jpg',
-    // //   title: 'Land Titling and Relocation Survey',
-    // //   description: 'Survey services for property titling, lot verification, and boundary relocation.'
-    // // }
   ]
 
   const [currentImage, setCurrentImage] = useState(0)
@@ -96,7 +76,13 @@ function Projects() {
                 <img src="/images/project1.jpg" alt="Residential Survey" />
                 <div className="project-info">
                   <h3>Residential Survey</h3>
-                  <p>Subdivision and lot boundary verification project.</p>
+                  <p>
+                    This project involved subdivision planning and lot boundary verification
+                    for a residential property. Accurate measurements were conducted to
+                    confirm legal boundaries and prevent future property disputes. The
+                    survey results provided the client with reliable documentation for
+                    development and ownership reference.
+                  </p>
                 </div>
               </div>
 
@@ -104,7 +90,12 @@ function Projects() {
                 <img src="/images/project2.jpg" alt="Commercial Mapping" />
                 <div className="project-info">
                   <h3>Commercial Site Mapping</h3>
-                  <p>Topographic survey for commercial building construction.</p>
+                  <p>
+                    A detailed topographic survey was performed for a planned commercial
+                    building development. The mapping included elevation data, existing
+                    site features, and boundary references. This information served as a
+                    critical basis for architectural and engineering design.
+                  </p>
                 </div>
               </div>
 
@@ -112,7 +103,12 @@ function Projects() {
                 <img src="/images/project3.jpg" alt="Road Infrastructure" />
                 <div className="project-info">
                   <h3>Road Infrastructure</h3>
-                  <p>Survey support for highway and road development.</p>
+                  <p>
+                    This survey supported highway and road development works by providing
+                    precise alignment and terrain data. Measurements were used for route
+                    planning, grading, and construction layout. The project ensured
+                    accurate implementation of infrastructure design standards.
+                  </p>
                 </div>
               </div>
 
@@ -120,7 +116,12 @@ function Projects() {
                 <img src="/images/project4.jpg" alt="Subdivision Development" />
                 <div className="project-info">
                   <h3>Subdivision Development Survey</h3>
-                  <p>Land segmentation and plotting for residential subdivision projects.</p>
+                  <p>
+                    The project focused on land segmentation and lot plotting for a
+                    residential subdivision. Each parcel was carefully measured and mapped
+                    according to development plans. The output supported legal
+                    documentation, lot allocation, and future construction activities.
+                  </p>
                 </div>
               </div>
 
@@ -128,7 +129,12 @@ function Projects() {
                 <img src="/images/project5.jpg" alt="Topographic Survey" />
                 <div className="project-info">
                   <h3>Topographic Elevation Survey</h3>
-                  <p>Detailed contour and terrain mapping for engineering site analysis.</p>
+                  <p>
+                    This survey provided detailed contour lines and elevation mapping of
+                    the terrain. The collected data helped engineers assess slope,
+                    drainage, and land suitability for construction. It was essential for
+                    safe and efficient site planning.
+                  </p>
                 </div>
               </div>
 
@@ -136,7 +142,12 @@ function Projects() {
                 <img src="/images/project6.jpg" alt="Construction Layout" />
                 <div className="project-info">
                   <h3>Construction Layout Survey</h3>
-                  <p>Precision site staking and structural layout marking for construction.</p>
+                  <p>
+                    Precision site staking and structural layout marking were completed
+                    for this construction project. Key reference points were established to
+                    guide foundation and structural works. This ensured that all building
+                    elements followed the approved design plan accurately.
+                  </p>
                 </div>
               </div>
 
@@ -144,7 +155,12 @@ function Projects() {
                 <img src="/images/project7.jpg" alt="Land Titling" />
                 <div className="project-info">
                   <h3>Land Titling and Relocation Survey</h3>
-                  <p>Boundary verification and technical survey support for property titling.</p>
+                  <p>
+                    This project involved boundary verification and relocation survey for
+                    land titling requirements. Existing property corners were identified
+                    and re-established using precise measurements. The results supported
+                    legal ownership documentation and registration processes.
+                  </p>
                 </div>
               </div>
             </div>
