@@ -777,11 +777,53 @@ h2 {
    FOOTER
 ========================= */
 .footer-section {
-  font-weight: 500;
-  text-align: center;
-  padding: 20px;
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2b);
   color: #fff;
-  background: #2a2a2b;
+  padding: 32px 16px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Container for better spacing control */
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Copyright text */
+.footer-copy {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+/* Tagline styling */
+.footer-tagline {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #ffb633;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* Developer line */
+.footer-dev {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Link styling */
+.footer-link {
+  color: #ffb633;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #5c67ff;
+  text-decoration: underline;
 }
 
 /* =========================
