@@ -5,7 +5,6 @@ import heroBg from '../assets/hero-survey-bg.jpg'
 function Hero() {
   return (
     <FadeInSection>
-      
       <section id="home" className="hero-section"
         style={{
           backgroundImage: `linear-gradient(
