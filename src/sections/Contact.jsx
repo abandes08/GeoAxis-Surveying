@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Alert from '@mui/material/Alert'
+import Stack from '@mui/material/Stack'
 import FadeInSection from '../components/FadeInSection'
 
 function Contact() {
@@ -9,7 +11,13 @@ function Contact() {
     message: ''
   })
 
-  const [successMessage, setSuccessMessage] = useState('')
+  const [alert, setAlert] = useState({
+    show: false,
+    type: '',
+    message: ''
+  })
+
+  const [openFAQ, setOpenFAQ] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -20,27 +28,81 @@ function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (!formData.fullName || !formData.email || !formData.message) {
-      alert('Please fill in required fields.')
+      setAlert({
+        show: true,
+        type: 'warning',
+        message: 'Please fill in required fields.'
+      })
       return
     }
 
-    console.log('Form Submitted:', formData)
-
-    setSuccessMessage('Inquiry sent successfully!')
-
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      message: ''
+    setAlert({
+      show: true,
+      type: 'info',
+      message: 'Sending inquiry...'
     })
+
+    const formDataToSend = new FormData()
+    formDataToSend.append(
+      'access_key',
+      import.meta.env.VITE_WEB3FORM_ACCESS_KEY
+    )
+    formDataToSend.append('name', formData.fullName)
+    formDataToSend.append('email', formData.email)
+    formDataToSend.append('phone', formData.phone)
+    formDataToSend.append('message', formData.message)
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setAlert({
+          show: true,
+          type: 'success',
+          message: 'Inquiry sent successfully!'
+        })
+
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: ''
+        })
+      } else {
+        setAlert({
+          show: true,
+          type: 'error',
+          message: 'Something went wrong. Please try again.'
+        })
+      }
+    } catch (error) {
+      setAlert({
+        show: true,
+        type: 'error',
+        message: 'Network error. Please try again.'
+      })
+    }
   }
 
-  const [openFAQ, setOpenFAQ] = useState(null)
+  // Auto-hide alert after 4 seconds
+  useEffect(() => {
+    if (alert.show) {
+      const timer = setTimeout(() => {
+        setAlert({ show: false, type: '', message: '' })
+      }, 4000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [alert])
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index)
@@ -93,6 +155,7 @@ function Contact() {
                   placeholder="Full Name *"
                   value={formData.fullName}
                   onChange={handleChange}
+                  required
                 />
 
                 <input
@@ -101,6 +164,7 @@ function Contact() {
                   placeholder="Email Address *"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
 
                 <input
@@ -109,6 +173,7 @@ function Contact() {
                   placeholder="Phone Number *"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                 />
 
                 <textarea
@@ -117,6 +182,7 @@ function Contact() {
                   rows="6"
                   value={formData.message}
                   onChange={handleChange}
+                  required
                 />
 
                 <p className="form-hint">
@@ -127,9 +193,14 @@ function Contact() {
                   Send Inquiry
                 </button>
 
-                {successMessage && (
-                  <p className="success-message">{successMessage}</p>
+                {alert.show && (
+                  <Stack sx={{ width: '100%', marginTop: '16px' }} spacing={2}>
+                    <Alert severity={alert.type}>
+                      {alert.message}
+                    </Alert>
+                  </Stack>
                 )}
+
               </form>
             </div>
 
@@ -158,9 +229,10 @@ function Contact() {
             </div>
           </div>
 
+          {/* FAQ SECTION */}
           <div className="faq-section">
             <div className="faq-wrapper">
-              {/* TOP BANNER */}
+
               <div className="faq-banner">
                 <img
                   src="/images/survey-faq.jpg"
@@ -173,13 +245,10 @@ function Contact() {
                   <p>
                     Find answers to the most common questions about our land
                     surveying, mapping, and consultation services. We understand that every project begins with important questions.
-                  Below are the most common inquiries from property owners,
-                  developers, and contractors.
                   </p>
                 </div>
               </div>
 
-              {/* QUESTIONS */}
               <div className="faq-content">
                 <div className="faq-container">
                   {faqData.map((faq, index) => (
