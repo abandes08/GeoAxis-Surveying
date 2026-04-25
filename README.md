@@ -1,23 +1,23 @@
-# **🌐 GeoAxis Surveying Web Application**
+# **🌐 Geoaxis Land Surveying Digital Portfolio **
 
-**🧭 Overview**
+**Overview**
 
 GeoAxis Surveying is a professional web application and portfolio platform built to showcase modern land surveying and geodetic engineering services. The platform is designed to help clients easily explore services, view completed projects, and connect with clients through a modern and responsive digital experience. The application serves as both a business portfolio website and a lead generation platform for surveying-related inquiries, project consultations, and client engagement.
 
-**✨ Key Features**
-🖥️ Responsive Modern UI
+**Key Features**
+_Responsive Modern UI_
 * Fully optimized for desktop, tablet, and mobile
 * Smooth transitions and clean layouts
 
-🏠 Landing Page / Hero Section
+_Landing Page / Hero Section_
 * Strong service positioning
 * Professional call-to-action
 
-👨‍💼 About Section
+_About Section_
 * Business background
 * Mission and credibility statement
 
-📐 Services Section
+_Services Section_
 * Showcasing the list of services offered
   - Relocation Survey
   - Subdivision Survey
@@ -33,16 +33,16 @@ GeoAxis Surveying is a professional web application and portfolio platform built
   - Resurvey
   - Zone of Significant Port Interest
 
-🏗️ Featured Projects
+_Featured Projects_
 * Showcasing of Highlights and Featured Projects
 * Image previews and project descriptions
 
-📩 Contact & Inquiry Form
+_Contact & Inquiry Form_
 * Client message/ inquiry submission
 * Project detail requests
 * Office / business information
 
-❓ FAQ Section
+_FAQ Section_
 * Answers to common client/ general questions
 
 ## Tech Stack
@@ -54,63 +54,38 @@ GeoAxis Surveying is a professional web application and portfolio platform built
 * Deployment: Vercel
 * Version: Git & Github
 
-⚙️ Installation & Setup
+_Installation & Setup_
 - git clone git@github.com:abandes08/GeoAxis-Surveying.git
 - cd GeoAxis-Surveying
 - npm install
 - npm run dev
 
-🌐 Open locally:
+_Open locally:_
 - http://localhost:5173
 
-🔗 Live Demo:
+_Live Demo:_
 - https://geoaxis-surveying.vercel.app/
 
-🎯 Business Purpose - This platform is built to 
-* 💼 Build online credibility
-* 📈 Attract clients
-* 📬 Generate inquiries
-* 🏢 Strengthen digital business presence
-* 📱 Support social media promotions
+_Business Purpose - This platform is built to_
+* Build online credibility
+* Attract clients
+* Generate inquiries
+* Strengthen digital business presence
+* Support social media promotions
 
-🚀 Future Enhancements
-* 🗂️ Admin dashboard
-* 📅 Appointment booking
-* 📎 File upload for lot plans
-* 🤖 AI chatbot support
-* 🔍 SEO optimization
-* 📊 analytics dashboard
+_Future Enhancements_
+* Admin dashboard
+* Appointment booking
+* File upload for lot plans
+* AI chatbot support
+* SEO optimization
+* Analytics Dashboard
 
-👨‍💻 Author
+_Author_
 **Anthony Andes**
-* 💻 IT Specialist | Full-Stack Developer | UI/UX | Web Solutions
-* 🐙 GitHub: https://github.com/abandes08
+* IT Specialist | Full-Stack Developer | UI/UX | Web Solutions
+* GitHub: https://github.com/abandes08
 
-📄 License
+_License_
 * © 2026 GeoAxis Surveying. All rights reserved.
-* 🚫 Unauthorized reuse or redistribution is prohibited.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Unauthorized reuse or redistribution is prohibited.
